@@ -20,7 +20,7 @@ class State(TypedDict):
     messages: Annotated[list, add_messages]
 
 # 2. Initialize the LLM (Using Groq for fast inference)
-llm = ChatGroq(model="llama3-8b-8192", temperature=0.2)
+llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0.2)
 
 # Dynamic Lab Contexts mapping to the React Frontend's active tabs
 LAB_CONTEXTS = {

@@ -45,6 +45,10 @@ graph_builder.add_edge("chatbot", END)
 memory = MemorySaver()
 app_graph = graph_builder.compile(checkpointer=memory)
 
+@app.route('/', methods=['GET'])
+def health_check():
+    return "IIIT AI Bot Server is running and ready! 🚀"
+
 @app.route('/chat', methods=['POST'])
 def chat():
     data = request.json
